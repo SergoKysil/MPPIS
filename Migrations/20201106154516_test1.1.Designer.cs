@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MPPIS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201105172357_test")]
-    partial class test
+    [Migration("20201106154516_test1.1")]
+    partial class test11
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

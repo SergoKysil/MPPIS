@@ -2,7 +2,7 @@
 
 namespace MPPIS.Migrations
 {
-    public partial class test : Migration
+    public partial class test11 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
