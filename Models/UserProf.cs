@@ -7,17 +7,32 @@ using System.Threading.Tasks;
 
 namespace MPPIS.Models
 {
-    public class User
+    public class UserProf
+
     {
         [Required]
-        [Key]
         public int Id { get; set; }
+
+
+        [Required(ErrorMessage ="Введіть ім'я!")]
+        [Display(Name ="Ім'я")]
+        public string FirstName { get; set; }
+
+
+        [Required(ErrorMessage = "Введіть прізвище!")]
+        [Display(Name ="Прізвище")]
+        public string LastName { get; set; }
+
 
         [Required(ErrorMessage ="Введіть коректний email")]
         [Display(Name ="Email")]
         [DataType(DataType.EmailAddress)]
         [EmailAddress]
         public string Email { get; set; }
+
+
+
+
 
 
 

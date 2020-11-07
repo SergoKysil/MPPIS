@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MPPIS.Models
+namespace MPPIS.Domain
 {
-    public class UserProfile
+    public interface IRepository
     {
         
     }
