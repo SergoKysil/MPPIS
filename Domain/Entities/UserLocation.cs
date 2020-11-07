@@ -14,7 +14,11 @@ namespace MPPIS.Domain.Entities
 
         public string HouseNumber { get; set; }
 
+        public int UserId { get; set; }
+
         public virtual Location Location { get; set; }
+
+        public virtual User User { get; set; }
 
 
     }

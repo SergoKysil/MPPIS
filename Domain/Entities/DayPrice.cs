@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace MPPIS.Domain.Entities
 {
-    public class Role : IEntityBase
+    public class DayPrice
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public decimal Price { get; set; }
 
-        public List<User> User { get; set; }
+        public int DataId { get; set; }
+
+        public virtual Data Data { get; set; }
+
     }
 }

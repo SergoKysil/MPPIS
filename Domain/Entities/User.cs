@@ -24,15 +24,17 @@ namespace MPPIS.Domain.Entities
 
         public int RoleId { get; set; }
 
-        public DateTime RegisteredDate { get; set; }
+        public int UserLocationId { get; set; }
 
-        public DateTime UpdatedDate { get; set; }
+        public DateTime RegisteredDate { get; set; }
 
         public bool IsEmailConfirmed { get; set; }
 
         public virtual Role Role { get; set; }
+        
+        public virtual UserLocation UserLocation { get; set; }
 
-        public virtual List<Data> Datas { get; set; }
+        public virtual List<Data> Data { get; set; }
 
 
 
