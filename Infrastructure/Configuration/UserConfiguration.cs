@@ -42,7 +42,7 @@ namespace MPPIS.Infrastructure.Configuration
             builder.Property(p => p.RegisteredDate)
                 .HasColumnName("registered_date")
                 .HasColumnType("datetime2")
-                .HasDefaultValueSql("GETUSTDATE()");
+                .HasDefaultValueSql("GETUTCDATE()");
 
             builder.Property(p => p.IsEmailConfirmed)
                 .IsRequired()

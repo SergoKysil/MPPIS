@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MPPIS.Domain.Entities
 {
@@ -12,11 +8,11 @@ namespace MPPIS.Domain.Entities
 
         public string City { get; set; }
 
-        public string Vilage { get; set; }
+        public string Village { get; set; }
 
         public string Street { get; set; }
 
-        public virtual List<User> Users { get; set; }
+        public virtual List<UserLocation> UserLocation { get; set; }
 
 
     }

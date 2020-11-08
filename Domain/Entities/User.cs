@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MPPIS.Domain.Entities
 {
@@ -24,8 +19,6 @@ namespace MPPIS.Domain.Entities
 
         public int RoleId { get; set; }
 
-        public int UserLocationId { get; set; }
-
         public DateTime RegisteredDate { get; set; }
 
         public bool IsEmailConfirmed { get; set; }
@@ -34,7 +27,7 @@ namespace MPPIS.Domain.Entities
         
         public virtual UserLocation UserLocation { get; set; }
 
-        public virtual List<Data> Data { get; set; }
+        public virtual List<StorageData> StorageData { get; set; }
 
 
 

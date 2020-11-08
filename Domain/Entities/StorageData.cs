@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MPPIS.Domain.Entities
 {
-    public class Data : IEntityBase
+    public class StorageData : IEntityBase
     {
         public int Id { get; set; }
 
@@ -17,7 +17,5 @@ namespace MPPIS.Domain.Entities
         public int UserId { get; set; }
 
         public virtual User User { get; set; }
-
-
     }
 }
