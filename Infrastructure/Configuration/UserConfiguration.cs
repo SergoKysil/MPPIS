@@ -59,7 +59,7 @@ namespace MPPIS.Infrastructure.Configuration
 
             builder.HasOne(d => d.Location)
                 .WithOne(p => p.User)
-                .HasForeignKey<User>(k => k.LocationId)
+                .HasForeignKey<Location>(k => k.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
 
             builder.HasMany(d => d.StorageData)

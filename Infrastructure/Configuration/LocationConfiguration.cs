@@ -19,6 +19,11 @@ namespace MPPIS.Infrastructure.Configuration
                 .HasColumnName("city")
                 .HasMaxLength(50);
 
+            builder.Property(p => p.District)
+                .IsRequired()
+                .HasColumnName("district")
+                .HasMaxLength(50);
+
             builder.Property(p => p.Village)
                 .IsRequired()
                 .HasColumnName("vilage")
@@ -28,7 +33,6 @@ namespace MPPIS.Infrastructure.Configuration
                 .IsRequired()
                 .HasColumnName("street")
                 .HasMaxLength(50);
-
 
         }
     }

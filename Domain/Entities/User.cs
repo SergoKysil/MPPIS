@@ -23,12 +23,10 @@ namespace MPPIS.Domain.Entities
 
         public int RoleId { get; set; }
 
-        public int LocationId { get; set; }
-
         public virtual Role Role { get; set; }
 
         public virtual Location Location { get; set; }
-       
+
         public virtual List<StorageData> StorageData { get; set; }
 
 
