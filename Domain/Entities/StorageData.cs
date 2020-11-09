@@ -16,6 +16,10 @@ namespace MPPIS.Domain.Entities
 
         public int UserId { get; set; }
 
+        public int DayPriceId { get; set; }
+
         public virtual User User { get; set; }
+
+        public virtual DayPrice DayPrice { get; set; }
     }
 }

@@ -12,9 +12,9 @@ namespace MPPIS.Domain.Entities
 
         public decimal Price { get; set; }
 
-        public int StorageDataId { get; set; }
+        public DateTime Date { get; set; }
 
-        public virtual StorageData StorageData { get; set; }
+        public virtual List<StorageData> StorageData { get; set; }
 
     }
 }
