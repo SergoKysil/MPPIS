@@ -57,10 +57,14 @@ namespace MPPIS.Infrastructure.Configuration
                 .HasForeignKey(k=>k.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
 
-            builder.HasOne(d => d.UserLocation)
+            builder.HasOne(d => d.Location)
                 .WithOne(p => p.User)
-                .HasForeignKey<UserLocation>(k => k.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull);    
+                .HasForeignKey<User>(k => k.LocationId)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+
+
+
 
 
         }

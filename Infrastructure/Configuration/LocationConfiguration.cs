@@ -29,10 +29,6 @@ namespace MPPIS.Infrastructure.Configuration
                 .HasColumnName("street")
                 .HasMaxLength(50);
 
-            builder.HasMany(d => d.UserLocation)
-                .WithOne(p => p.Location)
-                .HasForeignKey(k => k.LocationId)
-                .OnDelete(DeleteBehavior.ClientSetNull);
 
         }
     }

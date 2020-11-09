@@ -17,16 +17,18 @@ namespace MPPIS.Domain.Entities
 
         public string PasswordHash { get; set; }
 
-        public int RoleId { get; set; }
-
         public DateTime RegisteredDate { get; set; }
 
         public bool IsEmailConfirmed { get; set; }
 
-        public virtual Role Role { get; set; }
-        
-        public virtual UserLocation UserLocation { get; set; }
+        public int RoleId { get; set; }
 
+        public int LocationId { get; set; }
+
+        public virtual Role Role { get; set; }
+
+        public virtual Location Location { get; set; }
+       
         public virtual List<StorageData> StorageData { get; set; }
 
 

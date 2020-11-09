@@ -12,8 +12,9 @@ namespace MPPIS.Domain.Entities
 
         public string Street { get; set; }
 
-        public virtual List<UserLocation> UserLocation { get; set; }
+        public string HouseNumber { get; set; }
 
+        public virtual User User { get; set; }
 
     }
 }

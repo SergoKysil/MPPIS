@@ -347,4 +347,4 @@ ASALocalRun/
 healthchecksdb
 
 #ignore before not done
-/Infrastructure/Configuration/StorageDataConfiguration.cs
+
