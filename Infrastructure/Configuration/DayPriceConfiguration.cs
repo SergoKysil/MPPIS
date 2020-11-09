@@ -1,5 +1,4 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MPPIS.Domain.Entities;
 
@@ -9,6 +8,8 @@ namespace MPPIS.Infrastructure.Configuration
     {
         public void Configure(EntityTypeBuilder<DayPrice> builder)
         {
+            builder.ToTable("DayPrice");
+            
             builder.Property(p => p.Id)
                 .IsRequired()
                 .HasColumnName("id");

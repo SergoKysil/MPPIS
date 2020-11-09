@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MPPIS.Domain.Entities
+﻿namespace MPPIS.Domain.Entities
 {
     public class Location : IEntityBase
     {
