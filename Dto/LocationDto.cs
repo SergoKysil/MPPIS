@@ -1,6 +1,6 @@
-﻿namespace MPPIS.Domain.Entities
+﻿namespace MPPIS.Dto
 {
-    public class Location : IEntityBase
+    public class LocationDto
     {
         public int Id { get; set; }
 
@@ -13,8 +13,5 @@
         public string Street { get; set; }
 
         public string HouseNumber { get; set; }
-
-        public virtual User User { get; set; }
-
     }
 }

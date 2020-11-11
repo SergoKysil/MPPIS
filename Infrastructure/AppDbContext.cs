@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MPPIS.Domain.Entities;
 using MPPIS.Infrastructure.Configuration;
 using MPPIS.Infrastructure.Seeder;
 
-namespace MPPIS.Data
+namespace MPPIS.Infrastructure
 {
     public class AppDbContext : DbContext
     {

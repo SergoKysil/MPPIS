@@ -48,6 +48,7 @@ namespace MPPIS.Infrastructure.Seeder
                     Email = "test@gmail.com",
                     PasswordHash = new PasswordHasher<User>().HashPassword(null, "test"),
                     RoleId = 1,
+                    LocationId = 1
                 },
                 new User
                 {
@@ -57,7 +58,9 @@ namespace MPPIS.Infrastructure.Seeder
                     LastName = "Adminovich",
                     Email = "admin@gmail.com",
                     PasswordHash = new PasswordHasher<User>().HashPassword(null, "admin"),
-                    RoleId = 2
+                    RoleId = 2,
+                    LocationId = 2
+                    
                 }
             );
         }
@@ -72,8 +75,7 @@ namespace MPPIS.Infrastructure.Seeder
                     District = "Mostisky",
                     Village = "Tvirzha",
                     Street = "Sagaydachnogo",
-                    HouseNumber = "53",
-                    UserId = 1
+                    HouseNumber = "53"
                 },
                 new Location
                 {
@@ -82,8 +84,7 @@ namespace MPPIS.Infrastructure.Seeder
                     District = "Mostisky",
                     Village = "Tvirzha",
                     Street = "Sagaydachnogo",
-                    HouseNumber = "53",
-                    UserId = 2
+                    HouseNumber = "53"
                 }
                 );
         }
