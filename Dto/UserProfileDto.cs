@@ -14,6 +14,6 @@ namespace MPPIS.Dto
 
         public LocationDto LocationDto { get; set; }
 
-        public List<StorageDataDto> StorageDataDto { get; set; }
+        public List<StorageDataDto> StorageDatas { get; set; }
     }
 }
