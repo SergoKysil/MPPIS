@@ -21,6 +21,8 @@ namespace MPPIS.Domain.Entities
 
         public bool IsEmailConfirmed { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public int RoleId { get; set; }
 
         public int LocationId { get; set; }
