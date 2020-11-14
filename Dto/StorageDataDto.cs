@@ -9,5 +9,9 @@ namespace MPPIS.Dto
         public DateTime DateAdded { get; set; }
 
         public decimal CountProduction { get; set; }
+
+        public UserDto User { get; set; }
+
+        public DayPriceDto DayPrice { get; set; }
     }
 }

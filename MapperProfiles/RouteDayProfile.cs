@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using MPPIS.Domain.Entities;
+using Entities = MPPIS.Domain.Entities;
 using MPPIS.Dto;
 
 namespace MPPIS.MapperProfiles
@@ -8,7 +8,7 @@ namespace MPPIS.MapperProfiles
     {
         public RouteDayProfile()
         {
-            CreateMap<RouteDay, RouteDayDto>().ReverseMap();
+            CreateMap<RouteDayDto, Entities.RouteDay>().ReverseMap();
         }
     }
 }
