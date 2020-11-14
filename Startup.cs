@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MPPIS.Data;
+using MPPIS.Infrastructure;
 using MPPIS.Services;
 
 namespace MPPIS
@@ -29,6 +25,8 @@ namespace MPPIS
 
 
             services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
+
+            services.AddMapper();
 
 
 
