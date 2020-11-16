@@ -6,8 +6,10 @@ using MPPIS.Domain.Entities;
 using MPPIS.Dto;
 using MPPIS.Infrastructure;
 using MPPIS.Services.Interfaces;
+using System;
 using System.Data.Entity.Core;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace MPPIS.Services.Implementation
@@ -24,6 +26,7 @@ namespace MPPIS.Services.Implementation
         {
             _userRepository = userRepository;
             _context = context;
+            _mapper = mapper;
             _passwordHasher = new PasswordHasher<User>();
         }
 
@@ -43,12 +46,30 @@ namespace MPPIS.Services.Implementation
                 return null;
         }
 
-        public async Task<UserDto> GetByIdAsync(int userId)
+        public async Task<UserDto> FindByEmailAsync(string email)
         {
-            return _mapper.Map<UserDto>(await _userRepository.GetAll()
+            var user = await _userRepository.GetAll()
+                .FirstOrDefaultAsync(x => x.Email == email);
+                
+
+            if (user == null || user.IsEmailConfirmed == false)
+            {
+                throw new ObjectNotFoundException($"There is no user with email = {email} in database");
+            }
+
+            return _mapper.Map<UserDto>(user);
+        }
+
+        public async Task<UserDto> GetById(Expression<Func<User, bool>> predicate)
+        { 
+            var user = await _userRepository.GetAll()
                 .Include(p => p.Location)
                 .Include(p => p.Role)
-                .FirstOrDefaultAsync(x => x.Id == userId));
+                .FirstOrDefaultAsync(predicate);
+
+            if (user == null)
+                return null;
+            return _mapper.Map<UserDto>(user);
         }
 
         public async Task RemoveUser(int userId)
