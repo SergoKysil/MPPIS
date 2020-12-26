@@ -52,6 +52,8 @@ namespace MPPIS.Infrastructure.Configuration
 
             builder.Property(p => p.RoleId).HasColumnName("role_id").HasDefaultValue(1);
 
+            builder.Property(p => p.LocationId).HasColumnName("location_id");
+
             builder.HasOne(d=>d.Role)
                 .WithMany(p=>p.User)
                 .HasForeignKey(k=>k.RoleId)
