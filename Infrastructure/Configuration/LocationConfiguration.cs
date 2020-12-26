@@ -34,6 +34,11 @@ namespace MPPIS.Infrastructure.Configuration
                 .HasColumnName("street")
                 .HasMaxLength(50);
 
+            builder.Property(p => p.HouseNumber)
+                .IsRequired()
+                .HasColumnName("house_number")
+                .HasMaxLength(30);
+
         }
     }
 }

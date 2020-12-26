@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MPPIS.Domain.Entities;
 
@@ -30,9 +25,17 @@ namespace MPPIS.Infrastructure.Configuration
                 .HasColumnName("count_production")
                 .HasColumnType("decimal");
 
+            builder.Property(p => p.UserId).HasColumnName("user_id");
+
             builder.HasOne(d => d.User)
                 .WithMany(p => p.StorageData)
                 .HasForeignKey(k => k.UserId);
+
+            builder.Property(p => p.DayPriceId).HasColumnName("day_price_id");
+
+            builder.HasOne(d => d.DayPrice)
+                .WithMany(p => p.StorageData)
+                .HasForeignKey(k => k.DayPriceId);
 
         }
     }
